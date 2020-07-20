@@ -64,8 +64,11 @@ var initer = {
             }
 
             if (typeof creep.memory['resource'] == 'undefined') {
-                let energyLength = Game.rooms[creep.memory.room].find(FIND_SOURCES_ACTIVE).length;
-                creep.memory.resource = Math.floor(Math.random() * 100) % energyLength;
+                let energies = Game.rooms[creep.memory.room];
+                if (energies) {
+                    let energyLength = energies.find(FIND_SOURCES_ACTIVE).length;
+                    creep.memory.resource = Math.floor(Math.random() * 100) % energyLength;
+                }
             }
 
             if (typeof creep.memory['stat'] == 'undefined') {

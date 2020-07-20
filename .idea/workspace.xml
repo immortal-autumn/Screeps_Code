@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="628cec33-3994-4cf4-9d27-28add640db11" name="Default Changelist" comment="Nothing">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="628cec33-3994-4cf4-9d27-28add640db11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Starter_Pack/util.checkDeath.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/util.checkDeath.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Starter_Pack/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/init.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,8 @@
       <workItem from="1595176273671" duration="4597000" />
       <workItem from="1595244881840" duration="894000" />
       <workItem from="1595245790370" duration="688000" />
-      <workItem from="1595262633317" duration="1078000" />
+      <workItem from="1595262633317" duration="1339000" />
+      <workItem from="1595284107292" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="Nothing">
       <created>1595263637412</created>
@@ -89,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595263637412</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Little change">
+      <created>1595263767900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595263767900</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,7 +104,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nothing" />
+    <MESSAGE value="Little change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little change" />
   </component>
   <component name="WindowStateProjectService">
     <state x="544" y="243" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595177285249">
