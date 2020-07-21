@@ -14,10 +14,12 @@ var uTower = require('util.tower');
 var uDeath = require('util.checkDeath');
 
 var myRoom = ['W4S27'];
+const rooms = ['W4S27', 'W5S27'];
+const target = 'W5S27';
 
 module.exports.loop = function () {
-    cInit.run();
-    cConstructor.run();
+    cInit.run(rooms);
+    cConstructor.run(rooms);
 
     myRoom.forEach(room => uTower.run(room));
 
@@ -42,11 +44,11 @@ module.exports.loop = function () {
                 break;
             }
             case "attack": {
-                cAtt.run(creep);
+                cAtt.run(creep, target);
                 break;
             }
             case "claim": {
-                cClaim.run(creep);
+                cClaim.run(creep, target);
                 break;
             }
             case "carry": {

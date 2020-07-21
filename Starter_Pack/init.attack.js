@@ -1,8 +1,7 @@
 const structureTypes = [STRUCTURE_TOWER, STRUCTURE_SPAWN, STRUCTURE_EXTENSION, STRUCTURE_CONTAINER, STRUCTURE_STORAGE, STRUCTURE_INVADER_CORE];
-const target = 'W5S27';
 
 var initAttack = {
-    run: function (creep) {
+    run: function (creep, target) {
         let currentRoom = creep.room;
         if (currentRoom.name !== target) {
             let exitDir = creep.room.findExitTo(target);

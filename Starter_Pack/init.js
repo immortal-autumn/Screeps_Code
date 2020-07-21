@@ -1,7 +1,6 @@
 // Initialise the information of screeps, clearing non-existing memory, initialise room structure.
 var clearCache = require('util.clearCache');
 var defWall = require('util.wall');
-const rooms = ['W4S27', 'W5S27'];
 
 var unchangedRole = ['attack', 'defend', 'claim', 'carry'];
 
@@ -11,7 +10,7 @@ var weapon = ['attack', 'defend'];
 const structureTypes = [STRUCTURE_TOWER, STRUCTURE_SPAWN, STRUCTURE_EXTENSION, STRUCTURE_CONTAINER, STRUCTURE_STORAGE];
 
 var initer = {
-    run: function () {
+    run: function (rooms) {
         // Clear memory
         clearCache.run();
         // repair wall

@@ -1,7 +1,5 @@
-var target = 'W5S27';
-
 var initClaim = {
-    run: function (creep) {
+    run: function (creep, target) {
         let thisRoom = creep.room;
         if (thisRoom.name !== target) {
             let exitDir = creep.room.findExitTo(target);

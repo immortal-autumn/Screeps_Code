@@ -6,10 +6,10 @@ const nameBefore = 'CN';
 var nextCreep = 0;
 
 var initCons = {
-    run: function () {
+    run: function (rooms) {
         for (let i in Game.spawns) {
             let spawnInfo = Game.spawns[i];
-            uRoad.run(spawnInfo);
+            uRoad.run(spawnInfo, rooms);
 
             let randCase = Math.floor(Math.random() * 10);
             let sucSpa;
