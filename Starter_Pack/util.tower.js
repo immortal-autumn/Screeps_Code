@@ -16,7 +16,7 @@ var utilTower = {
             // Repair
             let failed = Game.rooms[room].find(FIND_STRUCTURES, {
                 filter: function (f) {
-                    return f.hits < f.hitsMax;
+                    return f.hits < f.hitsMax && f.hits < 30000;
                 }
             }).sort(function (a, b) {
                 return (a.hits / a.hitsMax) - (b.hits / b.hitsMax);
