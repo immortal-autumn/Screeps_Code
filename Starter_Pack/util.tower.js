@@ -13,7 +13,7 @@ var utilTower = {
             Game.notify(`User ${username} spotted in room ${room}`);
             towers.forEach(tower => tower.attack(hostiles[0]));
         } else {
-            towers.forEach(tower => function () {
+            towers.forEach(tower => {
                 // Repair
                 let failed = Game.rooms[room].find(FIND_STRUCTURES, {
                     filter: function (f) {
@@ -22,7 +22,8 @@ var utilTower = {
                 }).sort(function (a, b) {
                     return (a.hits / a.hitsMax) - (b.hits / b.hitsMax);
                 })[0];
-                if (towers.energy / towers.energyCapacity > 0.5) {
+                console.log(tower.store.energy / tower.store.energyCapacity);
+                if (tower.store.energy / tower.store.energyCapacity > 0.5) {
                     tower.repair(failed);
                 }
             });
