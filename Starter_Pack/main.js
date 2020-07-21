@@ -20,7 +20,6 @@ module.exports.loop = function () {
     cConstructor.run();
 
     myRoom.forEach(room => uTower.run(room));
-    Game.spawns.forEach(spawn => uRoad.run(spawn));
 
     for (let i in Game.creeps) {
         let creep = Game.creeps[i];

@@ -1,4 +1,6 @@
-// Spawning creeps based on probability
+var uRoad = require('util.roads');
+
+// Spawning creeps based on probability and spawning roads
 
 const nameBefore = 'CN';
 var nextCreep = 0;
@@ -6,9 +8,10 @@ var nextCreep = 0;
 var initCons = {
     run: function () {
         for (let i in Game.spawns) {
-            let randCase = Math.floor(Math.random() * 10);
-
             let spawnInfo = Game.spawns[i];
+            uRoad.run(spawnInfo);
+
+            let randCase = Math.floor(Math.random() * 10);
             let sucSpa;
             let amount = spawnInfo.room.find(FIND_MY_CREEPS).length;
             if (amount >= 10 && spawnInfo.room.find(FIND_MY_CREEPS, {
