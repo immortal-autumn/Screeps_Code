@@ -22,8 +22,7 @@ var utilTower = {
                 }).sort(function (a, b) {
                     return (a.hits / a.hitsMax) - (b.hits / b.hitsMax);
                 })[0];
-                console.log(tower.store.energy / tower.store.energyCapacity);
-                if (tower.store.energy / tower.store.energyCapacity > 0.5) {
+                if (tower.store[RESOURCE_ENERGY] / tower.store.getCapacity(RESOURCE_ENERGY) > 0.5) {
                     tower.repair(failed);
                 }
             });
