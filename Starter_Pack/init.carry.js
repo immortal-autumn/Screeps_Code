@@ -17,10 +17,17 @@ var initCarry = {
             }
             let dropRes = Game.rooms[creep.memory.room].find(FIND_DROPPED_RESOURCES);
             if (dropRes.length === 0) {
-                creep.memory.stat = 1;
-                return;
+                dropRes = Game.rooms[creep.memory.room].find(FIND_TOMBSTONES, {
+                    filter: function (tombstone) {
+                        return tombstone.store[RESOURCE_ENERGY] !== 0;
+                    }
+                });
+                if (dropRes.length === 0) {
+                    creep.memory.stat = 1;
+                    return;
+                }
             }
-            if (creep.pickup(dropRes[0]) === ERR_NOT_IN_RANGE) {
+            if (creep.pickup(dropRes[0]) === ERR_NOT_IN_RANGE || creep.withdraw(dropRes[0]) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(dropRes[0], {visualizePathStyle: {stroke: '#00aea8'}});
             }
         } else {
