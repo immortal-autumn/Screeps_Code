@@ -16,7 +16,7 @@ var utilCheckEnemy = {
                 }
             }
         }
-        return targets[0];
+        return targets[4];
     }
 };
 

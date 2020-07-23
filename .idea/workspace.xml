@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="628cec33-3994-4cf4-9d27-28add640db11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/statistic.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Starter_Pack/init.cons.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/init.cons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Starter_Pack/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Starter_Pack/util.checkEnemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/util.checkEnemy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ScreepsAutocomplete-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="ServiceViewManager">
@@ -83,7 +85,8 @@
       <workItem from="1595284107292" duration="1382000" />
       <workItem from="1595327729588" duration="5742000" />
       <workItem from="1595353742882" duration="240000" />
-      <workItem from="1595459817483" duration="9273000" />
+      <workItem from="1595459817483" duration="10160000" />
+      <workItem from="1595516874969" duration="1798000" />
     </task>
     <task id="LOCAL-00001" summary="Nothing">
       <created>1595263637412</created>
@@ -127,14 +130,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="406" y="31" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1595263766861" />
-    <state x="548" y="189" key="FileChooserDialogImpl" timestamp="1593453605408">
+    <state x="548" y="189" key="FileChooserDialogImpl" timestamp="1595516974368">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="548" y="189" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1593453605408" />
-    <state x="279" y="78" key="SettingsEditor" timestamp="1595245884890">
+    <state x="548" y="189" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1595516974368" />
+    <state x="279" y="78" key="SettingsEditor" timestamp="1595517118752">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="279" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1595245884890" />
+    <state x="279" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1595517118752" />
     <state x="580" y="352" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595263655617">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

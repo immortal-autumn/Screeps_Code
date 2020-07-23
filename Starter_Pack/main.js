@@ -15,8 +15,8 @@ var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
 
 var myRoom = ['W4S27'];
-const rooms = ['W4S27', 'W5S27'];
-const targets = ['W5S27', 'W6S27', "W5S28", "W6S28"];
+const rooms = ['W4S27', 'W5S27', 'W5S26'];
+const targets = ['W5S27', 'W6S27', "W5S28", "W6S28", 'W5S26'];
 
 module.exports.loop = function () {
     cInit.run(rooms);
