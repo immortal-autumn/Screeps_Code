@@ -7,13 +7,9 @@ var initClaim = {
             creep.moveTo(exit, {visualizePathStyle: {stroke: '#5b3475'}});
             return;
         }
-        let controller = creep.room.find(FIND_HOSTILE_STRUCTURES, {
-            filter: function (structure) {
-                return structure.structureType === STRUCTURE_CONTROLLER;
-            }
-        });
-        if (controller.length !== 0) {
-            if (creep.attackController(controller[0]) === ERR_NOT_IN_RANGE) {
+        let controller = creep.room.controller;
+        if (controller && !controller.my) {
+            if (creep.attackController(controller[0]) === ERR_NOT_IN_RANGE || creep.claimController(controller[0]) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(controller[0], {visualizePathStyle: {stroke: '#5b3475'}});
             }
         }
