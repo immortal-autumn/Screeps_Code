@@ -16,7 +16,6 @@ var uCheckEnemy = require('util.checkEnemy');
 
 var myRoom = ['W4S27'];
 const rooms = ['W4S27', 'W5S27'];
-const target = 'W6S27';
 const targets = ['W5S27', 'W6S27', "W5S28", "W6S28"];
 
 module.exports.loop = function () {
@@ -24,7 +23,7 @@ module.exports.loop = function () {
     cConstructor.run(rooms);
 
     myRoom.forEach(room => uTower.run(room));
-    console.log(uCheckEnemy.run(targets));
+    let target = uCheckEnemy.run(targets);
 
     for (let i in Game.creeps) {
         let creep = Game.creeps[i];
@@ -51,7 +50,7 @@ module.exports.loop = function () {
                 break;
             }
             case "claim": {
-                cClaim.run(creep, target);
+                cClaim.run(creep, rooms[1]);
                 break;
             }
             case "carry": {
