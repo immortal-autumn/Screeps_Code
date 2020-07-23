@@ -28,7 +28,7 @@ var initCons = {
                 }
                 return;
             }
-            if (amount >= 10 && spawnInfo.room.find(FIND_MY_CREEPS, {
+            if (amount >= 13 && spawnInfo.room.find(FIND_MY_CREEPS, {
                 filter: function (creep) {
                     return creep.memory.role === 'claim';
                 }
