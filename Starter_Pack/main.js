@@ -25,7 +25,7 @@ module.exports.loop = function () {
 
     for (let i in Game.creeps) {
         let creep = Game.creeps[i];
-        uDeath.run(creep);
+        // uDeath.run(creep);
         switch (creep.memory.role) {
             case "harvest": {
                 cHarvester.run(creep);
