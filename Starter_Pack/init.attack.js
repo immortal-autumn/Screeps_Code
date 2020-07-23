@@ -25,6 +25,8 @@ var initAttack = {
                     creep.attackController(enemy[0]) === ERR_NOT_IN_RANGE) {
                     creep.moveTo(enemy[0], {visualizePathStyle: {stroke: '#FF2D00'}});
                 }
+            } else {
+                creep.moveTo(25, 25);
             }
         }
 
