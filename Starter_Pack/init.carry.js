@@ -19,6 +19,7 @@ var initCarry = {
             if (dropRes.length === 0) {
                 dropRes = Game.rooms[creep.memory.room].find(FIND_TOMBSTONES, {
                     filter: function (tombstone) {
+                        console.log('Tombstone: ' + tombstone.name + ' has resource: ' + tombstone.store[RESOURCE_ENERGY]);
                         return tombstone.store[RESOURCE_ENERGY] !== 0;
                     }
                 });
