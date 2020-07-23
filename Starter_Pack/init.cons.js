@@ -45,7 +45,7 @@ var initCons = {
             if (amount === 0) {
                 sucSpa = spawnInfo.spawnCreep([WORK, WORK, CARRY, MOVE], nameBefore + nextCreep,
                     {memory: {'belongs': 0, 'role': 'harvest'}});
-            } else if (amount >= 10 && amount % 2 === 0) {
+            } else if (amount >= 8 && amount % 2 === 0) {
                 // 470 energy.
                 if (randCase < 0.5) {
                     sucSpa = spawnInfo.spawnCreep([ATTACK, ATTACK, ATTACK, MOVE, TOUGH, TOUGH, TOUGH, MOVE, MOVE, MOVE], nameBefore + nextCreep,
