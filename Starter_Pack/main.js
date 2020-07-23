@@ -40,7 +40,7 @@ module.exports.loop = function () {
                 break;
             }
             case "defend": {
-                cAtt.run(creep);
+                cAtt.run(creep, target);
                 break;
             }
             case "attack": {
