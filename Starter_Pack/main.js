@@ -14,6 +14,8 @@ var uTower = require('util.tower');
 var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
 
+var tReset = require('tmp.resetDef');
+
 var myRoom = ['W16S49'];
 const rooms = ['W16S49', 'W15S49'];
 const targets = ['W15S49', 'W16S49'];
@@ -22,7 +24,11 @@ module.exports.loop = function () {
     cInit.run(rooms);
     cConstructor.run(rooms);
 
-    myRoom.forEach(room => uTower.run(room));
+    myRoom.forEach(room => {
+        uTower.run(room);
+        tReset.run(room)
+    });
+
     let target = uCheckEnemy.run(targets);
 
     for (let i in Game.creeps) {
