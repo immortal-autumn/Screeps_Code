@@ -15,8 +15,8 @@ var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
 
 var myRoom = ['W16S49'];
-const rooms = ['W16S49'];
-const targets = [];
+const rooms = ['W16S49', 'W15S49'];
+const targets = ['W16S49', 'W15S49'];
 
 module.exports.loop = function () {
     cInit.run(rooms);
@@ -42,7 +42,7 @@ module.exports.loop = function () {
                 break;
             }
             case "defend": {
-                cAtt.run(creep, target);
+                cDef.run(creep, target);
                 break;
             }
             case "attack": {
