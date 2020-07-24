@@ -29,6 +29,7 @@ module.exports.loop = function () {
     myRoom.forEach(room => {
         uTower.run(room);
         tReset.run(room, alert);
+        alert = false;
     });
 
     let target = uCheckEnemy.run(targets);
