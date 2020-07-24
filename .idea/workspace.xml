@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="628cec33-3994-4cf4-9d27-28add640db11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Starter_Pack/tmp.resetDef.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Starter_Pack/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Starter_Pack/tmp.resetDef.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/tmp.resetDef.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <workItem from="1595459817483" duration="10160000" />
       <workItem from="1595516874969" duration="3703000" />
       <workItem from="1595546529693" duration="7756000" />
-      <workItem from="1595602055565" duration="458000" />
+      <workItem from="1595602055565" duration="571000" />
     </task>
     <task id="LOCAL-00001" summary="Nothing">
       <created>1595263637412</created>

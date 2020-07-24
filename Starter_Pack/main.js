@@ -1,3 +1,5 @@
+var alert = false;
+
 var cInit = require('init');
 
 var cHarvester = require('init.harv');
@@ -26,7 +28,7 @@ module.exports.loop = function () {
 
     myRoom.forEach(room => {
         uTower.run(room);
-        tReset.run(room)
+        tReset.run(room, alert);
     });
 
     let target = uCheckEnemy.run(targets);

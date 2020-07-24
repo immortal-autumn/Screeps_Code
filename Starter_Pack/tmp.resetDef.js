@@ -1,7 +1,5 @@
-var mask = false;
-
 var tmpResetWeapons = {
-    run: function (room) {
+    run: function (room, mask) {
         if (mask) {
             let defends = Game.rooms[room].find(FIND_MY_CREEPS, {
                 filter: (creep) => {
