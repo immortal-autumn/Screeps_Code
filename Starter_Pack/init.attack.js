@@ -9,13 +9,13 @@ var initAttack = {
             creep.moveTo(exit, {visualizePathStyle: {stroke: '#FF0000'}});
             return;
         }
-        let enemy = currentRoom.findClosestByPath(FIND_HOSTILE_CREEPS);
+        let enemy = creep.pos.findClosestByPath(FIND_HOSTILE_CREEPS);
         if (enemy.length !== 0) {
             if (creep.attack(enemy[0]) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy[0]) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(enemy[0], {visualizePathStyle: {stroke: '#FF0000'}});
             }
         } else {
-            enemy = currentRoom.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
+            enemy = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
                 filter: (structure) => {
                     return structureTypes.includes(structure.structureType)
                 }
