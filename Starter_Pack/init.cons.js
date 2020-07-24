@@ -36,11 +36,11 @@ var initCons = {
                 sucSpa = spawnInfo.spawnCreep([WORK, WORK, CARRY, MOVE],
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'harvest'}});
-            } else if (amount === 3) {
+            } else if (amount % 3 === 0) {
                 sucSpa = spawnInfo.spawnCreep([ATTACK, MOVE],
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'defend'}});
-            } else if (amount >= 8 && spawnInfo.memory.nextCreep % 2 === 0) {
+            } else if (amount >= 16 && spawnInfo.memory.nextCreep % 2 === 0) {
                 let randCase = Math.floor(Math.random() * 100);
                 // 470 energy.
                 if (randCase < 50) {
