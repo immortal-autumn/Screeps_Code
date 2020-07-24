@@ -16,7 +16,7 @@ var uCheckEnemy = require('util.checkEnemy');
 
 var myRoom = ['W16S49'];
 const rooms = ['W16S49', 'W15S49'];
-const targets = ['W16S49', 'W15S49'];
+const targets = ['W15S49', 'W16S49'];
 
 module.exports.loop = function () {
     cInit.run(rooms);

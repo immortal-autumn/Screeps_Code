@@ -39,7 +39,7 @@ var initCons = {
             } else if (amount % 4 === 0) {
                 sucSpa = spawnInfo.spawnCreep([ATTACK, MOVE],
                     nameBefore + spawnInfo.memory.nextCreep,
-                    {memory: {'belongs': 0, 'role': 'defend'}});
+                    {memory: {'belongs': 0, 'role': 'weapon'}});
             } else if (amount >= 12 && spawnInfo.memory.nextCreep % 2 === 0) {
                 let randCase = Math.floor(Math.random() * 100);
                 // 470 energy.
