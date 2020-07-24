@@ -23,7 +23,7 @@ var initCons = {
                 sucSpa = spawnInfo.spawnCreep([CARRY, CARRY, MOVE, MOVE],
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'carry'}});
-            } else if (amount >= 12 && spawnInfo.room.find(FIND_MY_CREEPS,
+            } else if (amount >= 15 && spawnInfo.room.find(FIND_MY_CREEPS,
                 {
                 filter: function (creep) {
                     return creep.memory.role === 'claim';
@@ -56,7 +56,7 @@ var initCons = {
                 if (amount <= 5) {
                     sucSpa = spawnInfo.spawnCreep([WORK, CARRY, MOVE],
                         nameBefore + spawnInfo.memory.nextCreep);
-                } else if (amount <= 10) {
+                } else if (amount <= 15) {
                     sucSpa = spawnInfo.spawnCreep([WORK, WORK, CARRY, MOVE],
                         nameBefore + spawnInfo.memory.nextCreep);
                 } else {
