@@ -10,7 +10,7 @@ var initAttack = {
             return;
         }
         let enemy = creep.pos.findClosestByPath(FIND_HOSTILE_CREEPS);
-        if (enemy.length !== 0) {
+        if (enemy) {
             if (creep.attack(enemy) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(enemy, {visualizePathStyle: {stroke: '#FF0000'}});
             }
@@ -20,7 +20,7 @@ var initAttack = {
                     return structureTypes.includes(structure.structureType)
                 }
             });
-            if (enemy.length !== 0) {
+            if (enemy) {
                 if (creep.attack(enemy) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy) === ERR_NOT_IN_RANGE) {
                     creep.moveTo(enemy, {visualizePathStyle: {stroke: '#FF2D00'}});
                 }
