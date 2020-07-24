@@ -11,8 +11,8 @@ var initAttack = {
         }
         let enemy = creep.pos.findClosestByPath(FIND_HOSTILE_CREEPS);
         if (enemy.length !== 0) {
-            if (creep.attack(enemy[0]) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy[0]) === ERR_NOT_IN_RANGE) {
-                creep.moveTo(enemy[0], {visualizePathStyle: {stroke: '#FF0000'}});
+            if (creep.attack(enemy) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(enemy, {visualizePathStyle: {stroke: '#FF0000'}});
             }
         } else {
             enemy = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
@@ -21,8 +21,8 @@ var initAttack = {
                 }
             });
             if (enemy.length !== 0) {
-                if (creep.attack(enemy[0]) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy[0]) === ERR_NOT_IN_RANGE) {
-                    creep.moveTo(enemy[0], {visualizePathStyle: {stroke: '#FF2D00'}});
+                if (creep.attack(enemy) === ERR_NOT_IN_RANGE || creep.rangedAttack(enemy) === ERR_NOT_IN_RANGE) {
+                    creep.moveTo(enemy, {visualizePathStyle: {stroke: '#FF2D00'}});
                 }
             } else {
                 creep.moveTo(25, 25);
