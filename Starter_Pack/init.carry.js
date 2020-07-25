@@ -31,7 +31,7 @@ var initCarry = {
                             return false;
                         }
                     });
-                    console.log(dropRes);
+                    console.log(currentPos.findClosestByPath(FIND_HOSTILE_STRUCTURES));
                     if (checkLength(dropRes)) break;
                 }
                 case 1: {
