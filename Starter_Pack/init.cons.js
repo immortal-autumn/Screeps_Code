@@ -19,7 +19,7 @@ var initCons = {
                 filter: function (creep) {
                     return creep.memory.role === 'carry';
                 }
-            }).length === 0) {
+            }).length <= 2) {
                 sucSpa = spawnInfo.spawnCreep([CARRY, CARRY, MOVE, MOVE],
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'carry'}});
