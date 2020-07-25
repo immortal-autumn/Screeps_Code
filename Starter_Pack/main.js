@@ -1,5 +1,3 @@
-var alert = false;
-
 var cInit = require('init');
 
 var cHarvester = require('init.harv');
@@ -22,14 +20,15 @@ var myRoom = ['E13S49'];
 const rooms = ['E13S49', 'E12S49'];
 const targets = ['E12S49', 'E13S49'];
 
+var mask = false;
 module.exports.loop = function () {
     cInit.run(rooms);
     cConstructor.run(rooms);
 
     myRoom.forEach(room => {
         uTower.run(room);
-        tReset.run(room, alert);
-        alert = false;
+        tReset.run(room, mask);
+        mask = false;
     });
 
     let target = uCheckEnemy.run(targets);
