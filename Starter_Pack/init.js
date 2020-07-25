@@ -2,7 +2,7 @@
 var clearCache = require('util.clearCache');
 var defWall = require('util.wall');
 
-var unchangedRole = ['attack', 'defend', 'claim', 'carry'];
+var unchangedRole = ['attack', 'defend', 'claim', 'carry', 'weapon'];
 
 var role = ['harvest', 'upgrade', 'build'];
 var weapon = ['attack', 'defend'];

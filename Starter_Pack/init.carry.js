@@ -15,17 +15,47 @@ var initCarry = {
                 creep.moveTo(exit, {visualizePathStyle: {stroke: '#00aea8'}});
                 return;
             }
-            let dropRes = Game.rooms[creep.memory.room].find(FIND_DROPPED_RESOURCES);
-            if (dropRes.length === 0) {
-                dropRes = Game.rooms[creep.memory.room].find(FIND_TOMBSTONES, {
-                    filter: function (tombstone) {
-                        return tombstone.store[RESOURCE_ENERGY] !== 0;
-                    }
-                });
-                if (dropRes.length === 0) {
-                    creep.memory.stat = 1;
-                    return;
+            let dropRes;
+            let currentPos = creep.pos;
+            let checkLength = function (dropped) {
+                if (dropped.length === 0) {
+                    return false;
                 }
+            };
+            switch (0) {
+                case 0: {
+                    dropRes = currentPos.findClosestByPath(FIND_STRUCTURES, {
+                        filter: function (structure) {
+                            if (structure.store) return !structure.my && structure.store[RESOURCE_ENERGY] !== 0;
+                            return false;
+                        }
+                    });
+                    if (checkLength(dropRes)) break;
+                }
+                case 1: {
+                    dropRes = currentPos.findClosestByPath(FIND_DROPPED_RESOURCES);
+                    if (checkLength(dropRes)) break;
+                }
+                case 2: {
+                    dropRes = currentPos.findClosestByPath(FIND_TOMBSTONES, {
+                        filter: function (tombstone) {
+                            return tombstone.store[RESOURCE_ENERGY] !== 0;
+                        }
+                    });
+                    if (checkLength(dropRes)) break;
+                }
+                case 3: {
+                    dropRes = currentPos.findClosestByPath(FIND_RUINS, {
+                        filter: function (ruin) {
+                            return ruin.store[RESOURCE_ENERGY] !== 0;
+                        }
+                    });
+                }
+            }
+            console.log(dropRes);
+            if (dropRes.length === 0) {
+                creep.memory.stat = 1;
+                return;
             }
             if (creep.pickup(dropRes[0]) === ERR_NOT_IN_RANGE || creep.withdraw(dropRes[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(dropRes[0], {visualizePathStyle: {stroke: '#00aea8'}});
