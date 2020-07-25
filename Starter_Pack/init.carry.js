@@ -25,9 +25,9 @@ var initCarry = {
             };
             switch (0) {
                 case 0: {
-                    dropRes = currentPos.findClosestByPath(FIND_STRUCTURES, {
+                    dropRes = currentPos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
                         filter: function (structure) {
-                            if (structure.store) return !structure.my && structure.store[RESOURCE_ENERGY] !== 0;
+                            if (structure.store) return structure.store[RESOURCE_ENERGY] !== 0;
                             return false;
                         }
                     });
