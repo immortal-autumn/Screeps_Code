@@ -18,6 +18,7 @@ var initCarry = {
             let dropRes;
             let currentPos = creep.pos;
             let checkLength = function (dropped) {
+                if (!dropped) return false;
                 if (dropped.length === 0) {
                     return false;
                 }
@@ -30,6 +31,7 @@ var initCarry = {
                             return false;
                         }
                     });
+                    console.log(dropRes);
                     if (checkLength(dropRes)) break;
                 }
                 case 1: {
@@ -52,7 +54,6 @@ var initCarry = {
                     });
                 }
             }
-            console.log(dropRes);
             if (dropRes.length === 0) {
                 creep.memory.stat = 1;
                 return;
