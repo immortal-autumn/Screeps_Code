@@ -31,7 +31,6 @@ var initCarry = {
                             return false;
                         }
                     });
-                    console.log(dropRes.length);
                     if (checkLength(dropRes)) break;
                 }
                 case 1: {
