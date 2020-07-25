@@ -19,8 +19,8 @@ var uCheckEnemy = require('util.checkEnemy');
 var tReset = require('tmp.resetDef');
 
 var myRoom = ['W9S46'];
-const rooms = ['W9S46'];
-const targets = ['W9S46'];
+const rooms = ['W9S46', 'W9S45'];
+const targets = ['W9S45', 'W9S46'];
 
 module.exports.loop = function () {
     cInit.run(rooms);
