@@ -53,6 +53,7 @@ var initCarry = {
                     });
                 }
             }
+            console.log(dropRes);
             if (dropRes.length === 0) {
                 creep.memory.stat = 1;
                 return;
