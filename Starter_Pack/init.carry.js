@@ -53,11 +53,11 @@ var initCarry = {
                     });
                 }
             }
-            console.log(dropRes);
             if (dropRes.length === 0) {
                 creep.memory.stat = 1;
                 return;
             }
+            console.log(creep.withdraw(dropRes[0], RESOURCE_ENERGY));
             if (creep.pickup(dropRes[0]) === ERR_NOT_IN_RANGE || creep.withdraw(dropRes[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
                 creep.moveTo(dropRes[0], {visualizePathStyle: {stroke: '#00aea8'}});
             }
