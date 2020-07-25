@@ -26,12 +26,12 @@ var initCarry = {
             switch (0) {
                 case 0: {
                     dropRes = currentPos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
-                        filter: function (structure) {
+                        filter: structure => {
                             if (structure.store) return structure.store[RESOURCE_ENERGY] !== 0;
                             return false;
                         }
                     });
-                    console.log(currentPos.findClosestByPath(FIND_HOSTILE_STRUCTURES));
+                    console.log(dropRes.length);
                     if (checkLength(dropRes)) break;
                 }
                 case 1: {
@@ -40,7 +40,7 @@ var initCarry = {
                 }
                 case 2: {
                     dropRes = currentPos.findClosestByPath(FIND_TOMBSTONES, {
-                        filter: function (tombstone) {
+                        filter: tombstone => {
                             return tombstone.store[RESOURCE_ENERGY] !== 0;
                         }
                     });
@@ -48,7 +48,7 @@ var initCarry = {
                 }
                 case 3: {
                     dropRes = currentPos.findClosestByPath(FIND_RUINS, {
-                        filter: function (ruin) {
+                        filter: ruin => {
                             return ruin.store[RESOURCE_ENERGY] !== 0;
                         }
                     });

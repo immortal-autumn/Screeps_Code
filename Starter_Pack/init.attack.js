@@ -17,7 +17,7 @@ var initAttack = {
         } else {
             enemy = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
                 filter: (structure) => {
-                    return structureTypes.includes(structure.structureType)
+                    return structureTypes.includes(structure.structureType);
                 }
             });
             if (enemy) {
