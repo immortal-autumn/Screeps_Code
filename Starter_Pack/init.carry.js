@@ -17,12 +17,6 @@ var initCarry = {
             }
             let dropRes;
             let currentPos = creep.pos;
-            let checkLength = function (dropped) {
-                if (!dropped) return false;
-                if (dropped.length === 0) {
-                    return false;
-                }
-            };
             switch (0) {
                 case 0: {
                     dropRes = currentPos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
@@ -31,11 +25,11 @@ var initCarry = {
                             return false;
                         }
                     });
-                    if (checkLength(dropRes)) break;
+                    if (dropRes) break;
                 }
                 case 1: {
                     dropRes = currentPos.findClosestByPath(FIND_DROPPED_RESOURCES);
-                    if (checkLength(dropRes)) break;
+                    if (dropRes) break;
                 }
                 case 2: {
                     dropRes = currentPos.findClosestByPath(FIND_TOMBSTONES, {
@@ -43,7 +37,7 @@ var initCarry = {
                             return tombstone.store[RESOURCE_ENERGY] !== 0;
                         }
                     });
-                    if (checkLength(dropRes)) break;
+                    if (dropRes) break;
                 }
                 case 3: {
                     dropRes = currentPos.findClosestByPath(FIND_RUINS, {
@@ -53,13 +47,12 @@ var initCarry = {
                     });
                 }
             }
-            if (dropRes.length === 0) {
+            if (!dropRes) {
                 creep.memory.stat = 1;
                 return;
             }
-            console.log(creep.withdraw(dropRes[0], RESOURCE_ENERGY));
-            if (creep.pickup(dropRes[0]) === ERR_NOT_IN_RANGE || creep.withdraw(dropRes[0], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
-                creep.moveTo(dropRes[0], {visualizePathStyle: {stroke: '#00aea8'}});
+            if (creep.pickup(dropRes) === ERR_NOT_IN_RANGE || creep.withdraw(dropRes, RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+                creep.moveTo(dropRes, {visualizePathStyle: {stroke: '#00aea8'}});
             }
         } else {
             if (creep.store[RESOURCE_ENERGY] === 0) {
