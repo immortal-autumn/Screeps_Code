@@ -5,6 +5,10 @@ var utilClearCache = {
                 delete Memory.creeps[name];
                 console.log('Clearing non-existing creep memory:', name);
             }
+            if (Game.creeps[name].memory.belongs == null) {
+                delete Game.creeps[name].memory.belongs;
+                console.log('Rejudging belongings!')
+            }
         }
     }
 };

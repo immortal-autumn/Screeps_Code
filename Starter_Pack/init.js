@@ -13,13 +13,15 @@ var initer = {
         for (let i in allCreeps) {
             let creep = allCreeps[i];
             if (typeof creep.memory['belongs'] == 'undefined') {
-                var targets = creep.room.find(FIND_STRUCTURES, {
+                var targets = creep.room.find(FIND_MY_STRUCTURES, {
                     filter: (structure) => {
                         return (structureTypes.includes(structure.structureType)) &&
                             structure.energy < structure.energyCapacity;
                     }
                 });
-                creep.memory.belongs = Math.floor(Math.random() * 100) % targets.length;
+                if (targets) {
+                    creep.memory.belongs = Math.floor(Math.random() * 100) % targets.length;
+                }
             }
 
             // Change the role when no enough screeps exists!
