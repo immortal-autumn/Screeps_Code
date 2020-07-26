@@ -14,6 +14,7 @@ var uTower = require('util.tower');
 var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
 var uCheckDef = require('util.checkDef');
+var uManageCons = require('util.manageConSite');
 
 var totalWar = '';
 var myRoom = ['E13S49'];
@@ -27,6 +28,7 @@ module.exports.loop = function () {
 
     myRoom.forEach(room => {
         uTower.run(room);
+        uManageCons.run(room);
     });
 
     let target;
