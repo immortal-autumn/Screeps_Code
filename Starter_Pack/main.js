@@ -20,24 +20,30 @@ var totalWar = '';
 var myRoom = ['E13S49'];
 const rooms = ['E13S49', 'E12S49', 'E13S48'];
 const targets = ['E12S49', 'E12S48'];
+var target;
 
 module.exports.loop = function () {
+    // Reduce CPU usage!
+    let delayedRunning = function (ticks) {
+        return Game.time % ticks === 0;
+    };
+
+    if (delayedRunning(10)) {
+        cConstructor.run(rooms);
+        uCheckDef.run();
+        if (totalWar === '') {
+            target = uCheckEnemy.run(targets);
+        } else {
+            target = totalWar;
+        }
+    }
+
     cInit.run(rooms);
-    cConstructor.run(rooms);
-    uCheckDef.run();
 
     myRoom.forEach(room => {
         uTower.run(room);
-        uManageCons.run(room);
+        if (delayedRunning(5)) uManageCons.run(room);
     });
-
-    let target;
-
-    if (totalWar === '') {
-        target = uCheckEnemy.run(targets);
-    } else {
-        target = totalWar;
-    }
 
     for (let i in Game.creeps) {
         let creep = Game.creeps[i];
@@ -69,6 +75,9 @@ module.exports.loop = function () {
             }
             case "carry": {
                 cCarry.run(creep);
+                break;
+            }
+            case "weapon": {
                 break;
             }
             default: {
