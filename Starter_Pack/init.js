@@ -8,8 +8,6 @@ const structureTypes = [STRUCTURE_TOWER, STRUCTURE_SPAWN, STRUCTURE_EXTENSION, S
 
 var initer = {
     run: function (rooms) {
-        // Clear memory
-        clearCache.run();
         // Initialise screeps' info
         let allCreeps = Game.creeps;
         for (let i in allCreeps) {
