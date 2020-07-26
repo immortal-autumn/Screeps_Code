@@ -31,10 +31,13 @@ module.exports.loop = function () {
         tReset.run(room, mask);
         mask = false;
     });
+
     let target;
 
     if (totalWar === '') {
         target = uCheckEnemy.run(targets);
+    } else {
+        target = totalWar;
     }
 
     for (let i in Game.creeps) {
