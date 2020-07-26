@@ -29,7 +29,7 @@ module.exports.loop = function () {
         return Game.time % ticks === 0;
     };
 
-    if (delayedRunning(10)) {
+    if (delayedRunning(5)) {
         cConstructor.run(rooms);
         uCheckDef.run();
         clearCache.run();
