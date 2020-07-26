@@ -36,8 +36,8 @@ var initCons = {
                 sucSpa = spawnInfo.spawnCreep([WORK, WORK, CARRY, MOVE],
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'harvest'}});
-            } else if (amount % 4 === 0) {
-                sucSpa = spawnInfo.spawnCreep([MOVE, ATTACK],
+            } else if (amount % 6 === 0) {
+                sucSpa = spawnInfo.spawnCreep([TOUGH, MOVE, ATTACK, ATTACK],
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'weapon'}});
             } else if (amount >= 15 && spawnInfo.memory.nextCreep % 2 === 0) {

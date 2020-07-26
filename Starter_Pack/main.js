@@ -19,7 +19,7 @@ var tReset = require('tmp.resetDef');
 var totalWar = '';
 var myRoom = ['E13S49'];
 const rooms = ['E13S49', 'E12S49'];
-const targets = ['E12S49', 'E13S49'];
+const targets = ['E12S49', 'E12S48'];
 
 var mask = false;
 module.exports.loop = function () {
