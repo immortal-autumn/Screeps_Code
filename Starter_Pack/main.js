@@ -17,7 +17,7 @@ var uCheckDef = require('util.checkDef');
 
 var totalWar = '';
 var myRoom = ['E13S49'];
-const rooms = ['E13S49', 'E12S49'];
+const rooms = ['E13S49', 'E12S49', 'E13S48'];
 const targets = ['E12S49', 'E12S48'];
 
 module.exports.loop = function () {
