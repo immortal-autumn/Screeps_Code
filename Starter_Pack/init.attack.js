@@ -3,6 +3,9 @@ const structureTypes = [STRUCTURE_TOWER, STRUCTURE_SPAWN, STRUCTURE_EXTENSION, S
 var initAttack = {
     run: function (creep, target) {
         let currentRoom = creep.room;
+        if (target === '') {
+            target = creep.memory.room;
+        }
         if (currentRoom.name !== target) {
             let exitDir = creep.room.findExitTo(target);
             let exit = creep.pos.findClosestByPath(exitDir);
@@ -25,7 +28,7 @@ var initAttack = {
                     creep.moveTo(enemy, {visualizePathStyle: {stroke: '#FF2D00'}});
                 }
             } else {
-                creep.moveTo(new RoomPosition(25, 25, creep.memory.room));
+                creep.moveTo(25,25);
             }
         }
 
