@@ -13,23 +13,20 @@ var uRoad = require('util.roads');
 var uTower = require('util.tower');
 var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
-
-var tReset = require('tmp.resetDef');
+var uCheckDef = require('util.checkDef');
 
 var totalWar = '';
 var myRoom = ['E13S49'];
 const rooms = ['E13S49', 'E12S49'];
 const targets = ['E12S49', 'E12S48'];
 
-var mask = false;
 module.exports.loop = function () {
     cInit.run(rooms);
     cConstructor.run(rooms);
+    uCheckDef.run();
 
     myRoom.forEach(room => {
         uTower.run(room);
-        tReset.run(room, mask);
-        mask = false;
     });
 
     let target;
