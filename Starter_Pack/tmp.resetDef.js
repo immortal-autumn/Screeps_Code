@@ -1,12 +1,16 @@
 var tmpResetWeapons = {
     run: function (room, mask) {
         if (mask) {
-            let defends = Game.rooms[room].find(FIND_MY_CREEPS, {
-                filter: (creep) => {
-                    return creep.memory.role === 'defend';
+            for (let i in Game.creeps) {
+                let creep = Game.creeps[i];
+                if (creep.memory.role === 'defend') {
+                    delete creep.memory.room;
+                    creep.memory.role = 'weapon';
                 }
-            });
-            defends.forEach(creep => creep.memory.role = 'weapon')
+                if (creep.memory.role === 'attack') {
+                    delete creep.memory.room;
+                }
+            }
         }
     }
 };

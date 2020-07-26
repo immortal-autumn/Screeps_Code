@@ -25,7 +25,7 @@ var initAttack = {
                     creep.moveTo(enemy, {visualizePathStyle: {stroke: '#FF2D00'}});
                 }
             } else {
-                creep.moveTo(25, 25);
+                creep.moveTo(new RoomPosition(25, 25, creep.memory.room));
             }
         }
 
