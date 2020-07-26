@@ -15,6 +15,7 @@ var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
 var uCheckDef = require('util.checkDef');
 var uManageCons = require('util.manageConSite');
+var clearCache = require('util.clearCache');
 
 var totalWar = '';
 var myRoom = ['E13S49'];
@@ -31,6 +32,7 @@ module.exports.loop = function () {
     if (delayedRunning(10)) {
         cConstructor.run(rooms);
         uCheckDef.run();
+        clearCache.run();
         if (totalWar === '') {
             target = uCheckEnemy.run(targets);
         } else {

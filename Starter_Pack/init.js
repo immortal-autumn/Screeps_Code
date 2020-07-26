@@ -1,7 +1,4 @@
-// Initialise the information of screeps, clearing non-existing memory, initialise room structure.
-var clearCache = require('util.clearCache');
-var defWall = require('util.wall');
-
+// Initialise the information of screeps.
 var unchangedRole = ['attack', 'defend', 'claim', 'carry', 'weapon'];
 
 var role = ['harvest', 'upgrade', 'build'];
@@ -13,8 +10,6 @@ var initer = {
     run: function (rooms) {
         // Clear memory
         clearCache.run();
-        // repair wall
-        // defWall.run();
         // Initialise screeps' info
         let allCreeps = Game.creeps;
         for (let i in allCreeps) {
