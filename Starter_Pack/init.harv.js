@@ -4,9 +4,7 @@ var initHarv = {
     run: function (creep) {
         if (creep.store.getFreeCapacity() > 0) {
             if (creep.room.name !== creep.memory.room) {
-                let exitDir = creep.room.findExitTo(creep.memory.room);
-                let exit = creep.pos.findClosestByPath(exitDir);
-                creep.moveTo(exit, {visualizePathStyle: {stroke: '#5041AE'}});
+                creep.moveTo(new RoomPosition(25, 25, creep.memory.room), {visualizePathStyle: {stroke: '#5041AE'}});
                 return;
             }
             var sources = creep.room.find(FIND_SOURCES_ACTIVE);
@@ -15,9 +13,7 @@ var initHarv = {
             }
         } else {
             if (creep.room.name !== creep.memory.origin) {
-                let exitDir = creep.room.findExitTo(creep.memory.origin);
-                let exit = creep.pos.findClosestByPath(exitDir);
-                creep.moveTo(exit, {visualizePathStyle: {stroke: '#5041AE'}});
+                creep.moveTo(new RoomPosition(25, 25, creep.memory.origin), {visualizePathStyle: {stroke: '#5041AE'}});
                 return;
             }
             var targets = creep.room.find(FIND_STRUCTURES, {
