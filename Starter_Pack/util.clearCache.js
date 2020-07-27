@@ -7,7 +7,6 @@ var utilClearCache = {
             } else {
                 if (Game.creeps[name].memory.belongs == null) {
                     delete Game.creeps[name].memory.belongs;
-                    console.log('Rejudging belongings!')
                 }
             }
         }
