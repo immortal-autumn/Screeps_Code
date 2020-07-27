@@ -2,9 +2,7 @@ var initClaim = {
     run: function (creep, target) {
         let thisRoom = creep.room;
         if (thisRoom.name !== target) {
-            let exitDir = creep.room.findExitTo(target);
-            let exit = creep.pos.findClosestByPath(exitDir);
-            creep.moveTo(exit, {visualizePathStyle: {stroke: '#5b3475'}});
+            creep.moveTo(new RoomPosition(25, 25, target), {visualizePathStyle: {stroke: '#5b3475'}});
             return;
         }
         let controller = creep.room.controller;

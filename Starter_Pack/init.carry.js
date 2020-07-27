@@ -10,9 +10,7 @@ var initCarry = {
                 return;
             }
             if (creep.memory.room !== creep.room.name) {
-                let exitDir = creep.room.findExitTo(creep.memory.room);
-                let exit = creep.pos.findClosestByPath(exitDir);
-                creep.moveTo(exit, {visualizePathStyle: {stroke: '#00aea8'}});
+                creep.moveTo(new RoomPosition(25, 25, creep.memory.room), {visualizePathStyle: {stroke: '#00aea8'}});
                 return;
             }
             let dropRes;
@@ -60,9 +58,7 @@ var initCarry = {
                 return;
             }
             if (creep.room.name !== creep.memory.origin) {
-                let exitDir = creep.room.findExitTo(creep.memory.origin);
-                let exit = creep.pos.findClosestByPath(exitDir);
-                creep.moveTo(exit, {visualizePathStyle: {stroke: '#00aea8'}});
+                creep.moveTo(new RoomPosition(25, 25, creep.memory.origin), {visualizePathStyle: {stroke: '#00aea8'}});
                 return;
             }
             var targets = creep.room.find(FIND_STRUCTURES, {
