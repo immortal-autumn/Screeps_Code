@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="628cec33-3994-4cf4-9d27-28add640db11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Starter_Pack/init.carry.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/init.carry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Starter_Pack/init.claim.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/init.claim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Starter_Pack/util.clearCache.js" beforeDir="false" afterPath="$PROJECT_DIR$/Starter_Pack/util.clearCache.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
       <workItem from="1595692083770" duration="356000" />
       <workItem from="1595761171316" duration="4932000" />
       <workItem from="1595782356526" duration="2131000" />
-      <workItem from="1595806682845" duration="1627000" />
+      <workItem from="1595806682845" duration="1785000" />
     </task>
     <task id="LOCAL-00001" summary="Nothing">
       <created>1595263637412</created>
