@@ -84,7 +84,7 @@ var initCarry = {
                         break;
                     }
                     default: {
-                        let container = creep.findClosestByPath(FIND_MY_STRUCTURES, {
+                        let container = creep.pos.findClosestByPath(FIND_MY_STRUCTURES, {
                             filter: (structure) => {
                                 return structure.structureType === STRUCTURE_STORAGE;
                             }
