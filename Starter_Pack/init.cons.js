@@ -37,18 +37,20 @@ var initCons = {
                     nameBefore + spawnInfo.memory.nextCreep,
                     {memory: {'belongs': 0, 'role': 'harvest'}});
             } else if (amount % 6 === 0) {
-                sucSpa = spawnInfo.spawnCreep([TOUGH, MOVE, ATTACK, ATTACK],
-                    nameBefore + spawnInfo.memory.nextCreep,
-                    {memory: {'belongs': 0, 'role': 'weapon'}});
-            } else if (amount >= 15 && spawnInfo.memory.nextCreep % 2 === 0) {
-                let randCase = Math.floor(Math.random() * 100);
-                // 470 energy.
-                if (randCase < 50) {
-                    sucSpa = spawnInfo.spawnCreep([TOUGH, TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK],
-                        nameBefore + spawnInfo.memory.nextCreep,
-                        {memory: {'belongs': 0, 'role': 'weapon'}});
+                if (amount >= 15) {
+                    let randCase = Math.floor(Math.random() * 100);
+                    // 470 energy.
+                    if (randCase < 50) {
+                        sucSpa = spawnInfo.spawnCreep([TOUGH, TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, ATTACK, ATTACK, ATTACK],
+                            nameBefore + spawnInfo.memory.nextCreep,
+                            {memory: {'belongs': 0, 'role': 'weapon'}});
+                    } else {
+                        sucSpa = spawnInfo.spawnCreep([TOUGH, TOUGH, MOVE, MOVE, MOVE, RANGED_ATTACK, RANGED_ATTACK],
+                            nameBefore + spawnInfo.memory.nextCreep,
+                            {memory: {'belongs': 0, 'role': 'weapon'}});
+                    }
                 } else {
-                    sucSpa = spawnInfo.spawnCreep([TOUGH, TOUGH, MOVE, MOVE, MOVE, RANGED_ATTACK, RANGED_ATTACK],
+                    sucSpa = spawnInfo.spawnCreep([TOUGH, MOVE, ATTACK, ATTACK],
                         nameBefore + spawnInfo.memory.nextCreep,
                         {memory: {'belongs': 0, 'role': 'weapon'}});
                 }
