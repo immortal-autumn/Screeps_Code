@@ -1,5 +1,7 @@
+// Initialising creeps
 var cInit = require('init');
 
+// Roles and highest level commands
 var cHarvester = require('init.harv');
 var cConstructor = require('init.cons');
 var cUpgrader = require('init.upgr');
@@ -9,14 +11,14 @@ var cAtt = require('init.attack');
 var cClaim = require('init.claim');
 var cCarry = require('init.carry');
 
-var uRoad = require('util.roads');
+// Utils to reduce repetition
 var uTower = require('util.tower');
-var uDeath = require('util.checkDeath');
 var uCheckEnemy = require('util.checkEnemy');
 var uCheckDef = require('util.checkDef');
 var uManageCons = require('util.manageConSite');
 var clearCache = require('util.clearCache');
 
+// User filled area
 var totalWar = '';
 var myRoom = ['E13S49'];
 const rooms = ['E13S49', 'E12S49', 'E13S48'];
