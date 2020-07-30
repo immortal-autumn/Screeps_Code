@@ -13,6 +13,14 @@ var utilRoads = {
                         {
                             spawn.room.createConstructionSite(chemin[i].x,chemin[i].y, STRUCTURE_ROAD);
                         }
+                        spawn.room.createConstructionSite(sources[j].pos.x+1, sources[j].pos.y+1, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x, sources[j].pos.y+1, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x+1, sources[j].pos.y, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x-1, sources[j].pos.y-1, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x-1, sources[j].pos.y, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x, sources[j].pos.y-1, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x-1, sources[j].pos.y+1, STRUCTURE_ROAD);
+                        spawn.room.createConstructionSite(sources[j].pos.x+1, sources[j].pos.y-1, STRUCTURE_ROAD);
                     }
                 }
             }
