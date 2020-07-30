@@ -11,16 +11,15 @@ var utilRoads = {
                         });
                         for (var i = 0; i < chemin.length; i++)
                         {
-                            spawn.room.createConstructionSite(chemin[i].x,chemin[i].y, STRUCTURE_ROAD);
+                            Game.rooms[room].createConstructionSite(chemin[i].x,chemin[i].y, STRUCTURE_ROAD);
                         }
-                        spawn.room.createConstructionSite(sources[j].pos.x+1, sources[j].pos.y+1, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x, sources[j].pos.y+1, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x+1, sources[j].pos.y, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x-1, sources[j].pos.y-1, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x-1, sources[j].pos.y, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x, sources[j].pos.y-1, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x-1, sources[j].pos.y+1, STRUCTURE_ROAD);
-                        spawn.room.createConstructionSite(sources[j].pos.x+1, sources[j].pos.y-1, STRUCTURE_ROAD);
+                        x = sources[j].pos.x;
+                        y = sources[j].pos.y;
+                        for (let m = -1; m <= 1; m++) {
+                            for (let n = -1; n <= 1; n++) {
+                                Game.rooms[room].createConstructionSite(x + m, y + n, STRUCTURE_ROAD);
+                            }
+                        }
                     }
                 }
             }
